@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vozes da Terra — 31/07 · Hiper Espaço</title>
+<meta name="description" content="Vozes da Terra: o primeiro chamado para o Portal 8:8. Vivência com a comitiva Xinamatsipata + Pakashanew Huni Kuin. 31/07, a partir das 17h30, no Hiper Espaço.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0c1913;
+    --bg-alt: #101f18;
+    --gold: #cda349;
+    --gold-light: #e8c97a;
+    --cream: #f3ead9;
+    --green-line: #2c4a37;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Poppins', sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.brand{
+    font-family:'Cinzel', serif;
+    color:var(--gold-light);
+    letter-spacing:0.5px;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .container{
+    max-width:520px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+  .section{padding:48px 0;}
+  .divider{
+    width:60px; height:3px; background:var(--gold);
+    margin:16px auto; border-radius:2px;
+  }
+  .eyebrow{
+    font-size:12px; letter-spacing:2px; text-transform:uppercase;
+    color:var(--gold); font-weight:600; text-align:center;
+  }
+  .center{text-align:center;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding-top:28px;
+  }
+  .hero img{
+    border-radius:12px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.55);
+  }
+  .hero-text{
+    text-align:center;
+    padding:22px 0 8px;
+  }
+  .hero-text h1{
+    font-size:26px;
+    line-height:1.3;
+  }
+  .hero-text p{
+    font-size:15px;
+    color:#cfe0d6;
+    margin-top:10px;
+    padding:0 6px;
+  }
+
+  /* CTA BUTTON */
+  .cta-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:linear-gradient(135deg,#25D366,#1ebe5b);
+    color:#08130c;
+    font-weight:700;
+    font-size:16px;
+    padding:16px 20px;
+    border-radius:50px;
+    box-shadow:0 10px 25px rgba(37,211,102,0.35);
+    margin:18px auto 0;
+    max-width:420px;
+    transition:transform .15s ease;
+  }
+  .cta-btn:active{transform:scale(0.97);}
+  .cta-btn svg{width:22px; height:22px; flex-shrink:0;}
+  .cta-micro{
+    text-align:center;
+    font-size:12.5px;
+    color:#9db3a5;
+    margin-top:10px;
+  }
+
+  /* STICKY CTA */
+  .sticky-cta{
+    position:fixed;
+    bottom:0; left:0; right:0;
+    background:rgba(12,25,19,0.95);
+    backdrop-filter:blur(6px);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    border-top:1px solid var(--green-line);
+    z-index:999;
+  }
+  .sticky-cta .cta-btn{margin:0 auto; max-width:100%; font-size:15px; padding:14px;}
+
+  /* CARDS */
+  .card-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:24px;
+  }
+  .card{
+    background:var(--bg-alt);
+    border:1px solid var(--green-line);
+    border-radius:14px;
+    padding:16px 14px;
+    text-align:center;
+  }
+  .card .icon{margin-bottom:10px; display:flex; justify-content:center;}
+  .card .icon svg{width:28px; height:28px; color:var(--gold);}
+  .card h3{font-size:13.5px; color:var(--gold-light); margin-bottom:4px;}
+  .card p{font-size:12px; color:#b7c9bd;}
+
+  /* PAIN LIST */
+  .pain-list{margin-top:20px; display:flex; flex-direction:column; gap:12px;}
+  .pain-item{
+    background:var(--bg-alt); border-radius:10px; padding:13px 16px;
+    border-left:3px solid var(--gold);
+    font-size:14px; color:#dbe7de;
+  }
+
+  /* OFFER */
+  .offer-box{
+    background:var(--bg-alt);
+    border:1px solid var(--gold);
+    border-radius:16px;
+    padding:24px 20px;
+    margin-top:20px;
+  }
+  .offer-list{list-style:none; margin-bottom:18px;}
+  .offer-list li{
+    font-size:14px; padding:7px 0; border-bottom:1px dashed var(--green-line);
+    display:flex; gap:8px;
+  }
+  .offer-list li:last-child{border-bottom:none;}
+  .price-row{
+    display:flex; gap:12px; margin-top:6px;
+  }
+  .price-card{
+    flex:1; text-align:center; background:var(--bg);
+    border-radius:12px; padding:14px 8px; border:1px solid var(--green-line);
+  }
+  .price-card .label{font-size:11.5px; color:#9db3a5; text-transform:uppercase; letter-spacing:1px;}
+  .price-card .value{font-size:24px; color:var(--gold-light); font-family:'Cinzel',serif; font-weight:700; margin-top:4px;}
+
+  /* FAQ */
+  details{
+    background:var(--bg-alt);
+    border:1px solid var(--green-line);
+    border-radius:10px;
+    padding:14px 16px;
+    margin-bottom:10px;
+  }
+  summary{
+    font-size:14.5px; font-weight:600; color:var(--gold-light);
+    cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary:after{content:"+"; font-size:20px; color:var(--gold);}
+  details[open] summary:after{content:"–";}
+  details p{font-size:13.5px; color:#c3d3c9; margin-top:10px;}
+
+  /* INFO / LOCATION */
+  .info-box{
+    background:var(--bg-alt); border:1px solid var(--green-line);
+    border-radius:14px; padding:18px; margin-top:20px;
+    font-size:13.5px; color:#cfe0d6;
+  }
+  .info-box .row{display:flex; gap:10px; padding:6px 0; align-items:flex-start;}
+  .info-box .row b{color:var(--gold-light); min-width:70px; display:inline-block;}
+
+  footer{
+    text-align:center; padding:36px 0 90px;
+    font-size:12px; color:#7f9488;
+    border-top:1px solid var(--green-line);
+    margin-top:20px;
+  }
+  footer .brand-line{color:var(--gold); font-weight:600; margin-bottom:6px;}
+
+  p.body-text{font-size:14.5px; color:#d3e0d8;}
+  p.body-text + p.body-text{margin-top:10px;}
+
+  @media (min-width:480px){
+    .hero-text h1{font-size:29px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <img src="poster-compressed.jpg" alt="Vozes da Terra — Portal 8:8, 31 de julho, Hiper Espaço">
+    <div class="hero-text">
+      <div class="eyebrow">Fauna Lab + HiperEscola apresentam</div>
+      <h1>Vozes da Terra</h1>
+      <p>O primeiro chamado para o Portal 8:8. Uma noite de tambor, rapé, música e troca de saberes com a comitiva Xinamatsipata + Pakashanew Huni Kuin.</p>
+      <a class="cta-btn" href="https://wa.me/5573982028412?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Vozes%20da%20Terra%20%2831/07%29." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#08130c"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.6-1.27 1.16-1.75 1.19-.45.03-.9.2-3.02-.63-2.55-1.02-4.2-3.63-4.33-3.8-.13-.17-1.03-1.37-1.03-2.61 0-1.24.65-1.85.88-2.1.22-.25.5-.31.66-.31.17 0 .33 0 .48.01.15.01.36-.06.56.43.22.53.74 1.83.8 1.96.06.13.1.29.02.46-.08.17-.13.28-.25.43-.13.15-.27.34-.38.46-.13.13-.27.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.15-.17.63-.74.8-.99.17-.26.34-.21.56-.13.22.09 1.42.67 1.66.79.24.13.4.19.46.3.06.11.06.63-.16 1.23z"/></svg>
+        Quero minha vaga no WhatsApp
+      </a>
+      <div class="cta-micro">31/07, a partir das 17h30 • Hiper Espaço, Arraial d'Ajuda</div>
+    </div>
+  </div>
+</div>
+
+<div class="container section">
+  <p class="body-text">Existe um chamado que a cidade grande não escuta. Um ritmo que vem antes das palavras, antes das telas, antes da pressa.</p>
+  <p class="body-text">Vozes da Terra é o primeiro chamado para o Portal 8:8 — uma noite em que a ancestralidade dos povos originários brasileiros se encontra com a dos povos do norte da Argentina, guiada pessoalmente pela comitiva Xinamatsipata + Pakashanew Huni Kuin.</p>
+  <p class="body-text">Não é um espetáculo pra assistir de longe. É uma vivência pra sentir com o corpo inteiro.</p>
+</div>
+
+<div class="container section" style="padding-top:0;">
+  <div class="eyebrow">Você já sentiu que...</div>
+  <div class="pain-list">
+    <div class="pain-item">A rotina te afasta de qualquer coisa que pareça sagrado?</div>
+    <div class="pain-item">Falta silêncio pra ouvir o que vem de dentro?</div>
+    <div class="pain-item">Tem curiosidade por rapé, tarô e tambor, mas nunca teve um espaço seguro e guiado pra isso?</div>
+    <div class="pain-item">Quer viver uma experiência indígena real — não uma versão rasa ou turística dela?</div>
+  </div>
+</div>
+
+<div class="container section" style="padding-top:0;">
+  <div class="eyebrow">O que vai acontecer</div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="16" cy="9" rx="10" ry="4"/><path d="M6 9v14c0 2.2 4.5 4 10 4s10-1.8 10-4V9"/><path d="M6 16c0 2.2 4.5 4 10 4s10-1.8 10-4"/></svg></div>
+      <h3>Oficina e Roda de Tambores</h3><p>Ritmo ancestral em comunidade</p>
+    </div>
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4c-6 4-9 10-9 16 0 3 2 6 5 7 0-4 1-8 4-11"/><path d="M16 4v22"/><path d="M16 10c2 1 4 3 4 6M16 16c2 1 3.5 2.5 3.5 5"/></svg></div>
+      <h3>Roda de Rapé</h3><p>Centramento guiado pela comitiva</p>
+    </div>
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 23a3 3 0 1 1-2-2.8"/><path d="M11 21V7l12-2v14"/><path d="M23 19a3 3 0 1 1-2-2.8"/></svg></div>
+      <h3>Espetáculo Musical</h3><p>Música ancestral ao vivo</p>
+    </div>
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="5" width="18" height="22" rx="2"/><path d="M16 11a4 4 0 1 0 3.5 6 5 5 0 1 1-3.5-6z"/></svg></div>
+      <h3>Mesa de Tarô</h3><p>Escuta e autoconhecimento</p>
+    </div>
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="2.2"/><circle cx="22" cy="10" r="2.2"/><circle cx="16" cy="18" r="2.2"/><circle cx="10" cy="26" r="2.2"/><circle cx="22" cy="26" r="2.2"/><path d="M10 12v12M22 12v12M16 16l-6-6M16 16l6-6M16 20l-6 6M16 20l6 6"/></svg></div>
+      <h3>Artesanato Indígena</h3><p>Peças com história, à venda</p>
+    </div>
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13" cy="16" r="9"/><circle cx="19" cy="16" r="9"/></svg></div>
+      <h3>Troca de Saberes</h3><p>Contato direto com a comitiva</p>
+    </div>
+  </div>
+</div>
+
+<div class="container section" style="padding-top:0;">
+  <div class="offer-box">
+    <div class="eyebrow" style="margin-bottom:6px;">Contribuição</div>
+    <ul class="offer-list">
+      <li>✓ Oficina e roda de tambores</li>
+      <li>✓ Roda de rapé</li>
+      <li>✓ Espetáculo musical ao vivo</li>
+      <li>✓ Mesa de tarô</li>
+      <li>✓ Oficina de troca de saberes com a comitiva</li>
+      <li>✓ Exposição e venda de artesanato indígena</li>
+    </ul>
+    <div class="price-row">
+      <div class="price-card">
+        <div class="label">Adulto</div>
+        <div class="value">R$ 25</div>
+      </div>
+      <div class="price-card">
+        <div class="label">Criança</div>
+        <div class="value">R$ 15</div>
+      </div>
+    </div>
+    <a class="cta-btn" href="https://wa.me/5573982028412?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Vozes%20da%20Terra%20%2831/07%29." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="#08130c"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.6-1.27 1.16-1.75 1.19-.45.03-.9.2-3.02-.63-2.55-1.02-4.2-3.63-4.33-3.8-.13-.17-1.03-1.37-1.03-2.61 0-1.24.65-1.85.88-2.1.22-.25.5-.31.66-.31.17 0 .33 0 .48.01.15.01.36-.06.56.43.22.53.74 1.83.8 1.96.06.13.1.29.02.46-.08.17-.13.28-.25.43-.13.15-.27.34-.38.46-.13.13-.27.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.15-.17.63-.74.8-.99.17-.26.34-.21.56-.13.22.09 1.42.67 1.66.79.24.13.4.19.46.3.06.11.06.63-.16 1.23z"/></svg>
+      Confirmar minha inscrição
+    </a>
+    <div class="cta-micro">Vagas limitadas ao espaço • confirmação direta pelo WhatsApp</div>
+  </div>
+</div>
+
+<div class="container section" style="padding-top:0;">
+  <div class="eyebrow">Dúvidas frequentes</div>
+  <div style="margin-top:20px;">
+    <details>
+      <summary>Nunca participei de uma roda de rapé, vou saber o que fazer?</summary>
+      <p>Sim. A vivência é guiada do início ao fim pela própria comitiva, que detém esse conhecimento tradicional. Ninguém entra sozinho na experiência.</p>
+    </details>
+    <details>
+      <summary>Posso levar meu filho?</summary>
+      <p>Pode — o evento tem contribuição reduzida para crianças (R$15) e é pensado para receber famílias.</p>
+    </details>
+    <details>
+      <summary>Não entendo nada de tarô, vou me sentir perdido?</summary>
+      <p>A mesa de tarô é um convite à escuta, não uma prova de conhecimento. Você só precisa chegar aberto.</p>
+    </details>
+    <details>
+      <summary>E se eu for sozinho(a)?</summary>
+      <p>A proposta do encontro é justamente formar roda e comunidade — ir sozinho é uma das formas mais comuns de chegar.</p>
+    </details>
+    <details>
+      <summary>Como garanto minha vaga?</summary>
+      <p>Direto pelo WhatsApp, pelo botão desta página. É lá que confirmamos sua presença.</p>
+    </details>
+  </div>
+</div>
+
+<div class="container section" style="padding-top:0;">
+  <div class="info-box">
+    <div class="row"><b>Data</b> 31 de julho de 2026 (sexta-feira)</div>
+    <div class="row"><b>Horário</b> A partir das 17h30</div>
+    <div class="row"><b>Local</b> Hiper Espaço — Wellness • Eventos • Experiências</div>
+    <div class="row"><b>Endereço</b> Rua dos Coqueiros, 831 — Arraial d'Ajuda</div>
+    <div class="row"><b>Realização</b> Fauna Lab + HiperEscola</div>
+  </div>
+</div>
+
+<div class="container section center" style="padding-top:0;">
+  <h2 style="font-size:22px;">A roda vai se abrir de qualquer jeito.</h2>
+  <p class="body-text" style="margin-top:10px;">A pergunta é só se você vai estar dentro dela.</p>
+  <a class="cta-btn" href="https://wa.me/5573982028412?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Vozes%20da%20Terra%20%2831/07%29." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="#08130c"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.6-1.27 1.16-1.75 1.19-.45.03-.9.2-3.02-.63-2.55-1.02-4.2-3.63-4.33-3.8-.13-.17-1.03-1.37-1.03-2.61 0-1.24.65-1.85.88-2.1.22-.25.5-.31.66-.31.17 0 .33 0 .48.01.15.01.36-.06.56.43.22.53.74 1.83.8 1.96.06.13.1.29.02.46-.08.17-.13.28-.25.43-.13.15-.27.34-.38.46-.13.13-.27.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.15-.17.63-.74.8-.99.17-.26.34-.21.56-.13.22.09 1.42.67 1.66.79.24.13.4.19.46.3.06.11.06.63-.16 1.23z"/></svg>
+    Quero minha vaga no WhatsApp
+  </a>
+</div>
+
+<footer>
+  <div class="brand-line">Fauna Lab + HiperEscola</div>
+  Vozes da Terra • 31/07/2026 • Hiper Espaço, Arraial d'Ajuda
+</footer>
+
+<div class="sticky-cta">
+  <a class="cta-btn" href="https://wa.me/5573982028412?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Vozes%20da%20Terra%20%2831/07%29." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="#08130c"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.6-1.27 1.16-1.75 1.19-.45.03-.9.2-3.02-.63-2.55-1.02-4.2-3.63-4.33-3.8-.13-.17-1.03-1.37-1.03-2.61 0-1.24.65-1.85.88-2.1.22-.25.5-.31.66-.31.17 0 .33 0 .48.01.15.01.36-.06.56.43.22.53.74 1.83.8 1.96.06.13.1.29.02.46-.08.17-.13.28-.25.43-.13.15-.27.34-.38.46-.13.13-.27.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.15-.17.63-.74.8-.99.17-.26.34-.21.56-.13.22.09 1.42.67 1.66.79.24.13.4.19.46.3.06.11.06.63-.16 1.23z"/></svg>
+    Garantir minha vaga — Vozes da Terra
+  </a>
+</div>
+
+</body>
+</html>
